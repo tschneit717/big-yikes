@@ -28,4 +28,8 @@
     justify-content: center;
     flex-direction: column;
   }
+  h1 {
+    font-size: 200px;
+    font-family:fantasy;
+  }
 </style>
