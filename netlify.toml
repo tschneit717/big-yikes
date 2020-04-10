@@ -1,5 +1,5 @@
 [build]
   functions = "functions/"
-  base    = "public"
+  base    = "/"
   publish = "dist"
   command = "npm install && npm run build"
