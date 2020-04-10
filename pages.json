@@ -1,0 +1,17 @@
+{
+  "index": {
+    "title": "Sitemap",
+    "template": "public/index.html",
+    "entry": "src/main.js"
+  },
+  "calculator": {
+    "title": "FM-Challenge-1_Calculator",
+    "template": "public/calculator.html",
+    "entry": "src/main.js"
+  },
+  "blogposts": {
+    "title": "FM-Challenge-2_Blogposts",
+    "template": "public/blog.html",
+    "entry": "src/main.js"
+  }
+}
