@@ -40,6 +40,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    position:fixed;
     overflow: hidden;
     &:before {
         content: "";

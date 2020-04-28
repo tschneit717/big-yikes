@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "autoprefixer": "^9.7.6",
-    "basscss": "^8.0.2",
     "core-js": "^3.3.2",
     "netlify-lambda": "^0.2.1",
     "vue": "^2.6.10",
