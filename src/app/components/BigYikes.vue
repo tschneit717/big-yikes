@@ -2,10 +2,10 @@
   <div id="app" @mousemove="getCoordinates">
     <div id="tilt-container" :style="{ perspectiveOrigin: `${x}% ${y}%`}">
         <p>That's gonna be a big</p>
-        <h1  contenteditable data-heading="YIKES" class="square">YIKES</h1>
+        <h1 :data-heading=text class="square">{{text}}</h1>
         <p>from me dog</p>
     </div>
-    <a href="https://github.com/tschneit717" target="_blank"><i class="fab fa-github"></i></a>
+    <a class="portfolio" href="https://github.com/tschneit717" target="_blank"><i class="fab fa-github"></i> I'm sorry</a>
   </div>
 </template>
 <script>
@@ -13,13 +13,13 @@
     name: "BigYikes",
     data() {
       return {
+        text: 'YIKES',
         x: 0,
         y: 0
       }
     },
     methods: {
       init() {
-
       },
       getCoordinates(e) {
         this.x = e.clientX / 10;
@@ -34,21 +34,20 @@
 <style lang="scss" scoped>
   $red: #fe4560;
   $blue: #98b5cc;
-  $fontFamily: fantasy;
+  $fontFamily: 'Kaushan Script';
   #app {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     overflow: hidden;
-    &:before
-    {
+    &:before {
         content: "";
         position: absolute;
-        width: 200%;
-        height: 200%;
-        top: -50%;
-        left: -50%;
+        width: 300%;
+        height: 300%;
+        top: -100%;
+        left: -100%;
         z-index: -1;    
         background: rgb(255,94,94);
         background: radial-gradient(circle at 80%, rgba(255,94,94,1) 0%, rgba(212,68,196,1) 50%);
@@ -89,17 +88,14 @@
     }
   p {
     font-family: $fontFamily;
-    font-size:2vw
+    font-size:4vw
   }
   h1 {
-    font-size: 60vw;
     font-family:$fontFamily;
-  }
-
-  h1 {
+    white-space: nowrap;
     font-family: 'CoreCircus', sans-serif;
     text-transform: uppercase;
-    font-size: 14vw;
+    font-size: 18vw;
     text-align: center;
     line-height: 1;
     font-weight: normal;
@@ -154,5 +150,13 @@
 	font-family: 'CoreCircus';
 	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot');
 	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype');
+}
+.portfolio {
+  position: fixed;
+  bottom:0;
+  padding:10px;
+  opacity:0.4;
+  text-decoration: none;
+  font-size: 10px;
 }
 </style>
